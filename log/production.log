@@ -1,0 +1,66 @@
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2008-09-20 18:01:56) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMzA1ZDhmYjRhNmVhNDg4YzIy
+MjRmYjRjNjVmMmFkODU=--100133cd44ccb0ac1dc60c6a2f30fb618c1993ab
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/rails/info/properties" with {:method=>:get}):
+    /opt/jruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /opt/jruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /opt/jruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /opt/jruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /opt/jruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /opt/jruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /opt/jruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /opt/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/bin/../lib/mongrel/rails.rb:76:in `process'
+    /opt/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/bin/../lib/mongrel/rails.rb:74:in `process'
+    /opt/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:159:in `process_client'
+    /opt/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `each'
+    /opt/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:158:in `process_client'
+    /opt/jruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-java/lib/mongrel.rb:285:in `run'
+    :1:in `initialize'
+
+Rendering /opt/jruby/lib/ruby/gems/1.8/gems/actionpack-2.1.1/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2008-09-20 18:02:05) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMzA1ZDhmYjRhNmVhNDg4YzIy
+MjRmYjRjNjVmMmFkODU=--100133cd44ccb0ac1dc60c6a2f30fb618c1993ab
+  Parameters: {"controller"=>"posts", "action"=>"index"}
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.06151 (16 reqs/sec) | Rendering: 0.03011 (48%) | DB: 0.01400 (22%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-09-20 18:02:08) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMzA1ZDhmYjRhNmVhNDg4YzIy
+MjRmYjRjNjVmMmFkODU=--100133cd44ccb0ac1dc60c6a2f30fb618c1993ab
+  Parameters: {"controller"=>"posts", "action"=>"new"}
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 0.14717 (6 reqs/sec) | Rendering: 0.09383 (63%) | DB: 0.00000 (0%) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2008-09-20 18:02:20) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMzA1ZDhmYjRhNmVhNDg4YzIy
+MjRmYjRjNjVmMmFkODU=--100133cd44ccb0ac1dc60c6a2f30fb618c1993ab
+  Parameters: {"authenticity_token"=>"eb1dd92567382fef4c502909d1ef6be3d46f3de6", "post"=>{"title"=>"mytitle", "body"=>"my body", "published"=>"1"}, "commit"=>"Create", "controller"=>"posts", "action"=>"create"}
+Redirected to http://localhost:3000/posts/1
+Completed in 0.05910 (16 reqs/sec) | DB: 0.01361 (23%) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2008-09-20 18:02:20) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsGOgtub3RpY2UiI1Bvc3Qgd2FzIHN1Y2Nlc3NmdWxseSBjcmVhdGVk
+LgY6CkB1c2VkewY7BkY6DGNzcmZfaWQiJTMwNWQ4ZmI0YTZlYTQ4OGMyMjI0
+ZmI0YzY1ZjJhZDg1--3f012c6acdbcf5276bcc543f2e2fe661c8245b1f
+  Parameters: {"controller"=>"posts", "action"=>"show", "id"=>"1"}
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 0.09485 (10 reqs/sec) | Rendering: 0.02800 (29%) | DB: 0.04496 (47%) | 200 OK [http://localhost/posts/1]

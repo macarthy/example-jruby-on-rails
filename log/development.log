@@ -1,0 +1,77 @@
+  [4;36;1mSQL (0.009345)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.021634)[0m   [0mCREATE DATABASE `test_development` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000322)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000411)[0m   [0mCREATE DATABASE `test_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.000323)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000459)[0m   [0mCREATE DATABASE `test_production` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.001440)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.129872)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_bin[0m
+  [4;36;1mSQL (0.009605)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.001927)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20080920163114)
+  [4;36;1mSQL (0.004049)[0m   [0;1mCREATE TABLE `posts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `body` text, `published` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB CHARACTER SET utf8 COLLATE utf8_bin[0m
+  [4;35;1mSQL (0.007529)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20080920163114')[0m
+  [4;36;1mSQL (0.000610)[0m   [0;1mSELECT version FROM schema_migrations[0m
+
+
+Processing PostsController#index (for 127.0.0.1 at 2008-09-20 17:32:47) [GET]
+  Session ID: ebb9e2e55ba848b06ea89972e1784d1c
+  Parameters: {"controller"=>"posts", "action"=>"index"}
+  [4;36;1mSQL (0.001419)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPost Load (0.004288)[0m   [0mSELECT * FROM `posts` [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.05393 (18 reqs/sec) | Rendering: 0.03401 (63%) | DB: 0.00571 (10%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2008-09-20 17:32:50) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--83ffdc672c476e85c9d2bf42b7346e9db2f03d15
+  Parameters: {"controller"=>"posts", "action"=>"new"}
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 0.11561 (8 reqs/sec) | Rendering: 0.03257 (28%) | DB: 0.00000 (0%) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2008-09-20 17:32:54) [POST]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMzA1ZDhmYjRhNmVhNDg4YzIy
+MjRmYjRjNjVmMmFkODU=--100133cd44ccb0ac1dc60c6a2f30fb618c1993ab
+  Parameters: {"authenticity_token"=>"eb1dd92567382fef4c502909d1ef6be3d46f3de6", "post"=>{"title"=>"ghfg", "body"=>"hfghfgh", "published"=>"1"}, "commit"=>"Create", "controller"=>"posts", "action"=>"create"}
+  [4;36;1mSQL (0.027339)[0m   [0;1mINSERT INTO `posts` (`title`, `body`, `published`, `created_at`, `updated_at`) VALUES('ghfg', 'hfghfgh', 1, '2008-09-20 16:32:54', '2008-09-20 16:32:54')[0m
+Redirected to http://localhost:3000/posts/1
+Completed in 0.12937 (7 reqs/sec) | DB: 0.02734 (21%) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2008-09-20 17:32:54) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsGOgtub3RpY2UiI1Bvc3Qgd2FzIHN1Y2Nlc3NmdWxseSBjcmVhdGVk
+LgY6CkB1c2VkewY7BkY6DGNzcmZfaWQiJTMwNWQ4ZmI0YTZlYTQ4OGMyMjI0
+ZmI0YzY1ZjJhZDg1--3f012c6acdbcf5276bcc543f2e2fe661c8245b1f
+  Parameters: {"controller"=>"posts", "action"=>"show", "id"=>"1"}
+  [4;35;1mPost Load (0.044205)[0m   [0mSELECT * FROM `posts` WHERE (`posts`.`id` = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 0.18048 (5 reqs/sec) | Rendering: 0.07541 (41%) | DB: 0.04420 (24%) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2008-09-20 17:32:56) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsGOgtub3RpY2UiI1Bvc3Qgd2FzIHN1Y2Nlc3NmdWxseSBjcmVhdGVk
+LgY6CkB1c2VkewY7BlQ6DGNzcmZfaWQiJTMwNWQ4ZmI0YTZlYTQ4OGMyMjI0
+ZmI0YzY1ZjJhZDg1--b9606b5cebe7f4de7f240e62e7a7f894704c0d2d
+  Parameters: {"controller"=>"posts", "action"=>"index"}
+  [4;36;1mPost Load (0.001688)[0m   [0;1mSELECT * FROM `posts` [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.06011 (16 reqs/sec) | Rendering: 0.03757 (62%) | DB: 0.00169 (2%) | 200 OK [http://localhost/posts]
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2008-09-20 17:59:55) [GET]
+  Session ID: BAh7ByIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7ADoMY3NyZl9pZCIlMzA1ZDhmYjRhNmVhNDg4YzIy
+MjRmYjRjNjVmMmFkODU=--100133cd44ccb0ac1dc60c6a2f30fb618c1993ab
+  Parameters: {"controller"=>"rails/info", "action"=>"properties"}
+  [4;36;1mSQL (0.001429)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001596)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 0.06991 (14 reqs/sec) | Rendering: 0.00622 (8%) | DB: 0.00303 (4%) | 200 OK [http://localhost/rails/info/properties]
